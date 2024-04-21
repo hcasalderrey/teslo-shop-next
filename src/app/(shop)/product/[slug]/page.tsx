@@ -52,7 +52,7 @@ export default function({params}: Props) {
 
             <h3 className="text-sm font-bold">Descripción</h3>
 
-            <p className="font-light">{product.description}</p>
+            <p className="font-light text-pretty">{product.description}</p>
         </div>
 
     </div>
