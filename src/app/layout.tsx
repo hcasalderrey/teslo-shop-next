@@ -5,8 +5,8 @@ import "./globals.css";
 
 
 export const metadata: Metadata = {
-  title: "Teslo | Shop",
-  description: "tienda virtual de productos",
+  title: "Mi-Catalogo | consultas y compras",
+  description: "catálogo virtual de productos",
 };  
 
 export default function RootLayout({
