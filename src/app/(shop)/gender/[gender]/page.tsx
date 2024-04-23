@@ -5,7 +5,7 @@ import { redirect } from "next/navigation";
  
 import { ProductGrid, Title } from "@/components";
 import { Pagination } from '../../../../components/ui/pagination/Pagination';
-import { getPaginatedProductsWithImages } from "@/app/actions";
+import { getPaginatedProductsWithImages } from "@/actions";
 import { Gender } from "@prisma/client";
   
 

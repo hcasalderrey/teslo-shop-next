@@ -5,7 +5,10 @@ import "./globals.css";
 
 
 export const metadata: Metadata = {
-  title: "Mi-Catalogo | consultas y compras",
+  title:{
+    template: "%s | Mi-Catalogo",
+    default: "Home | Mi-Catalogo",
+  },
   description: "catálogo virtual de productos",
 };  
 
