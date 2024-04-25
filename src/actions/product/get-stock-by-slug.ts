@@ -25,7 +25,6 @@ export const getStockBySlug = async (slug: string): Promise<number> => {
     } catch (error) {
         console.log(error)
         return 0
-        throw new Error('Error al obtener el producto')
     }
     
 }

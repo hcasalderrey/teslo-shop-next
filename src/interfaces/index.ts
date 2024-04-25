@@ -1,2 +1,1 @@
-export * from './product.interface'
-export * from './priceAR'
+export * from './product.interface' 

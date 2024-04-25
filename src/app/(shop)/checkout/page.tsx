@@ -3,7 +3,7 @@ import { Title } from "../../../components/ui/title/Title";
 import { initialData } from "@/seed/seed";
 import Image from "next/image";
 import { QuantitySelector } from "@/components";
-import { priceAR } from "@/interfaces";
+import { priceAR } from "@/utils";
 
 const productsInCart = [
   initialData.products[0],

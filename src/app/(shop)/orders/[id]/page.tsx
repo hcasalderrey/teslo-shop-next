@@ -3,7 +3,7 @@ import Link from "next/link";
 import { initialData } from "@/seed/seed";
 import Image from "next/image";
 import {   Title } from "@/components";
-import { priceAR } from "@/interfaces";
+import { priceAR } from "@/utils";
 import clsx from "clsx";
 import { IoCardOutline, IoCartOutline } from 'react-icons/io5';
 
