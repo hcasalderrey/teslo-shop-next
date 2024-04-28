@@ -4,17 +4,23 @@ import prisma from '../lib/prisma';
  
 async function main() {
 
-    const { categories, products} = initialData;
+    const { categories, products, users} = initialData;
     //1. Borrar registros previos en la base de datos
 
     await Promise.all( [
         await prisma.productImage.deleteMany(),
         await prisma.product.deleteMany(),    
         await prisma.category.deleteMany(),
+        await prisma.user.deleteMany()
+
     ] )
 
 
     //2. Insertar datos en la base de datos 
+
+    await prisma.user.createMany({
+        data: users})
+
     const categoriesData = categories.map( category => {
         return { name: category }
     })

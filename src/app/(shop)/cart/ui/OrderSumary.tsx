@@ -30,7 +30,7 @@ export const OrderSumary = () => {
       <span className="text-right">{priceAR(subTotal)}</span>
 
       <span>Impuestos (21%)</span>
-      <span className="text-right">{(priceAR(tax))}1</span>
+      <span className="text-right">{(priceAR(tax))}</span>
 
       <span className="mt-5 text-2xl font-semibold">Total:</span>
       <span className="mt-5 text-2xl font-semibold text-right">{priceAR(total)}</span>
