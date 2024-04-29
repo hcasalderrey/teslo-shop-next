@@ -1,4 +1,3 @@
-
 // https://tailwindcomponents.com/component/hoverable-table
 import { Title } from '@/components';
 
@@ -75,4 +74,4 @@ export default function OrdersPage() {
       </div>
     </>
   );
-} 
+}

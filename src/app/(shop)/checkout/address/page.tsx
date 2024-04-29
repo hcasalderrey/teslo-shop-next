@@ -1,6 +1,6 @@
+import Link from 'next/link';
 
 import { Title } from '@/components';
-import Link from 'next/link';
 
 export default function AddressPage() {
   return (
@@ -70,7 +70,7 @@ export default function AddressPage() {
               className="p-2 border rounded-md bg-gray-200"
             >
               <option value="">[ Seleccione ]</option>
-              <option value="AR">Argentina</option>
+              <option value="CRI">Costa Rica</option>
             </select>
           </div>
 

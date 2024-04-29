@@ -34,11 +34,11 @@ export const ProductSlideshow = ( { images, title, className }: Props ) => {
     <div className={ className }>
 
       <Swiper
-        //style={ {
-        //  '--swiper-navigation-color': '#fff',
-        //  '--swiper-pagination-color': '#fff',
-        //} as React.CSSProperties
-        //}
+        style={ {
+          '--swiper-navigation-color': '#fff',
+          '--swiper-pagination-color': '#fff',
+        } as React.CSSProperties
+        }
         spaceBetween={ 10 }
         navigation={ true }
         autoplay={{
@@ -59,7 +59,7 @@ export const ProductSlideshow = ( { images, title, className }: Props ) => {
                 height={ 800 }
                 src={ `/products/${ image }` }
                 alt={ title }
-                className="rounded-lg object-fill "
+                className="rounded-lg object-fill"
               />
             </SwiperSlide>
 
