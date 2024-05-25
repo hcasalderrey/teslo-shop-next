@@ -7,3 +7,6 @@ export {registerUser} from './auth/register';
 export  {getProductBySlug } from './product/get-product-by-slug';
 export { getStockBySlug } from './product/get-stock-by-slug';
 export * from './product/product-pagination';
+export * from './country/get-country'
+
+export * from './address/set-user-address'

@@ -3,7 +3,7 @@ interface SeedCountry {
     id: string;
   }
   
-  export const countries: SeedCountry[] = [
+  export const country: SeedCountry[] = [
     { name: "Afghanistan", id: "AF" },
     { name: "Aland Islands", id: "AX" },
     { name: "Albania", id: "AL" },

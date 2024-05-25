@@ -1,6 +1,9 @@
 "use client";
  
+import { Country } from "@/interfaces";
+import { useAddressStore } from "@/store";
 import clsx from "clsx"; 
+import { useEffect } from "react";
 import { useForm } from "react-hook-form";
 
 type FormImpus= {
@@ -15,15 +18,33 @@ type FormImpus= {
     rememberAddress: boolean;
 }
 
-export const AddressForm = () => { 
-    const {handleSubmit, register, formState: {isValid}} = useForm<FormImpus>({
+interface Props {
+    countries: Country[];
+}
+
+export const AddressForm = ({countries}:Props) => { 
+    const {handleSubmit, register, formState: {isValid}, reset} = useForm<FormImpus>({
         defaultValues: {
             //TODO: leer de la base de datos
         }
     })
 
+
+    const setAddress = useAddressStore((state) => state.setAddress)
+
+    const address = useAddressStore((state) => state.address)
+
+    useEffect(() => {
+      if(address.firstName){
+        reset(address)
+      }
+    }, [])
+    
+
+
     const onSubmit = (data: FormImpus) => {
-        console.log({data});
+        console.log({data})
+        setAddress(data)
     } 
   
     return (
@@ -62,12 +83,12 @@ export const AddressForm = () => {
             <span>País</span>
             <select className="p-2 border rounded-md bg-gray-200" { ...register('country', { required: true  }) }>
               <option value="">[ Seleccione ]</option>
-                <option key='AR' value='AR'>Argentina</option>
-              {/*{
+                {/*<option key='AR' value='AR'>Argentina</option>*/}
+              {
                 countries.map( country => (
                   <option key={ country.id } value={ country.id }>{ country.name }</option>
                 ))
-              }*/}
+              }
             </select>
           </div>
     

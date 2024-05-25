@@ -69,17 +69,35 @@ model ProductImage {
 }
 
 model User {
-    id            String    @id @default(uuid())
+    id            String       @id @default(uuid())
     name          String
     password      String
-    email         String    @unique
+    email         String       @unique
     emailVerified DateTime?
-    role          Role      @default(user)
+    role          Role         @default(user)
     image         String?
+    UserAddress   UserAddress?
 }
 
+model Country {
+    id          String        @id @unique
+    name        String
+    UserAddress UserAddress[]
+}
 
-model Countries {
-    id            String    @id @unique
-    name          String
+model UserAddress {
+    id         String  @id @default(uuid())
+    firstName  String
+    lastName   String
+    address    String
+    address2   String?
+    postalCode String
+    phone      String
+
+    //Relaciones
+    country   Country @relation(fields: [countryId], references: [id])
+    countryId String
+
+    user   User   @relation(fields: [userId], references: [id])
+    userId String @unique
 }
